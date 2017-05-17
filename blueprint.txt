@@ -1,0 +1,24 @@
+# Movies
+ - ID (INT)
+ - Name (varchar)
+ - ProfessionalRel (INT)
+ - RealeseDate (DATE)
+ - Lenght (INT)
+ - Genre (varchar)
+ - TrailerURL (varchar)
+ - Language (varchar)
+ - Country (varchar)
+ - Type (varchar)
+
+# Professionals
+ - ID (INT)
+ - Name	(varchar)
+ - MovieRel (INT)
+ - DayOfBirth (date)
+ - Gender (bool)
+
+# Relationship
+ - MovieID (INT)
+ - ProID (INT)
+ - Actor (bool)
+ - Director (bool)
