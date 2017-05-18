@@ -1,25 +1,56 @@
 # Movies
  - ID (INT)
+ - createdAt  (timestamp)
+ - uppdatedAt (timestamp)
  - name (varchar)
  - professionalRel (INT)
  - realeseDate (DATE)
  - coverPhoto
  - lenght (INT)
- - genre (varchar)
  - trailerURL (varchar)
- - language (varchar)
- - country (varchar)
- - type (varchar)
+ - gener
+ - language
+ - country
 
 # Professionals
  - ID (INT)
  - name	(varchar)
- - movieRel (INT)
+ - createdAt  (timestamp)
+ - uppdatedAt (timestamp)
  - dayOfBirth (date)
  - gender (bool)
 
-# Relationship
- - movieID (INT)
- - proID (INT)
- - actor (bool)
- - director (bool)
+#MovieXProfessionals
+ - movie_ID (INT)
+ - pro_ID (INT)
+ - actor (Bool)
+ - director (Bool)
+
+# Genre
+1 - Action
+2 - Adventure
+3 - Animated
+4 - Comedy 
+5 - Crime
+6 - Drama
+7 - Fantasy
+8 - Horror
+9 - Romance
+10 - Science fiction
+11 - Thriller
+12 - Western
+
+# Language
+1 - English
+2 - French
+3 - Scandinavian
+4 - Spanish
+
+# Country (varchar)
+1 - Denmark
+2 - England
+3 - France
+4 - Norway
+5 - Sweden
+6 - USA
+
