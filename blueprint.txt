@@ -54,3 +54,6 @@
 5 - Sweden
 6 - USA
 
+Plural på all tabeller
+Klasser singular
+Alltid bara börja med ID
