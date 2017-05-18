@@ -1,0 +1,5 @@
+SELECT lmdb.movies.name, lmdb.professionals.name, lmdb.moviesXprofessionals.actor, lmdb.moviesXprofessionals.director 
+FROM lmdb.movies, lmdb.professionals, lmdb.moviesXprofessionals 
+WHERE lmdb.moviesXprofessionals.movieID = lmdb.movies.id 
+AND lmdb.moviesXprofessionals.proID = lmdb.professionals.id
+AND lmdb.moviesXprofessionals.actor = 1;
