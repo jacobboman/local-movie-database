@@ -1,0 +1,39 @@
+Internet Movie Database
+
+# Actor /ska refaktureras till "Persons"
+	- Name
+	- Age
+	- Country
+	- Movies[movie]
+	- CoverPhoto
+	- Info
+	
+# Director
+	- Name
+	- Age
+	- Country
+	- Movies[movie]
+	- CoverPhoto
+	- Info
+
+# Producer
+	- Name
+	- Country
+	- Movies[movie]
+	- CoverPhoto
+	- Info
+
+# Movie
+	- MovieName
+	- Genres[genre]
+	- Types[type]
+	- Year
+	- Countries[country]
+	- Languages[language]
+	- Length
+	- Actors[actor]
+	- Directors[director]
+	- Producers[producer]
+	- CoverPhoto
+	- Info
+
