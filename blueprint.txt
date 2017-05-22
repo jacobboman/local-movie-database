@@ -1,59 +1,72 @@
 # Movies
- - ID (INT)
+ - id (INT)
+ - name (varchar)
  - createdAt  (timestamp)
  - uppdatedAt (timestamp)
- - name (varchar)
- - professionalRel (INT)
  - realeseDate (DATE)
- - coverPhoto
+ - coverPhoto (VARCHAR)
  - lenght (INT)
  - trailerURL (varchar)
- - gener
- - language
- - country
+ - gener_id (INT)
+ - language_id (INT)
+ - country_id (INT)
+
+---------------------------------------
 
 # Professionals
- - ID (INT)
+ - id (INT)
  - name	(varchar)
  - createdAt  (timestamp)
  - uppdatedAt (timestamp)
  - dayOfBirth (date)
  - gender (bool)
 
-#MovieXProfessionals
+---------------------------------------
+
+#MoviesXProfessionals
  - movie_ID (INT)
- - pro_ID (INT)
+ - professional_ID (INT)
  - actor (Bool)
  - director (Bool)
 
-# Genre
-1 - Action
-2 - Adventure
-3 - Animated
-4 - Comedy 
-5 - Crime
-6 - Drama
-7 - Fantasy
-8 - Horror
-9 - Romance
-10 - Science fiction
-11 - Thriller
-12 - Western
+---------------------------------------
 
-# Language
-1 - English
-2 - French
-3 - Scandinavian
-4 - Spanish
+# Genres
+ - id		1 - Action
+ - name		2 - Adventure
+			3 - Animated
+			4 - Comedy 
+			5 - Crime
+			6 - Drama
+			7 - Fantasy
+			8 - Horror
+			9 - Romance
+			10 - Science fiction
+			11 - Thriller
+			12 - Western
 
-# Country (varchar)
-1 - Denmark
-2 - England
-3 - France
-4 - Norway
-5 - Sweden
-6 - USA
+---------------------------------------
 
-Plural på all tabeller
-Klasser singular
-Alltid bara börja med ID
+# Countrys (varchar)
+ - id		1 - Denmark
+ - name		2 - England
+			3 - France
+			4 - Norway
+			5 - Sweden
+			6 - USA
+			
+---------------------------------------
+
+# Languages
+ - id		1 - English
+ - name		2 - French
+			3 - Scandinavian
+			4 - Spanish
+
+
+
+------ ÖVRING INFO. --------
+	
+	Plural på all tabeller
+	Klasser singular
+	Alltid bara börja med ID

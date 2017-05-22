@@ -1,5 +1,5 @@
 {
-    "name": "jacobboman/orm",
+    "name": "local-movie-database",
     "license": "WTFPL",
     "authors": [
         {
@@ -13,7 +13,8 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\Models\\": "Models/"
+            "App\\Models\\": "Models/",
+            "App\\Controllers\\": "Controllers/"
         }
     }
 }
