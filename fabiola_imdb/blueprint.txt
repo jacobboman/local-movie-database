@@ -1,0 +1,80 @@
+ENTITIES (ENTITETER):
+
+# Actors /ska refaktureras till "Persons"
+	- Name
+	- Age
+	- Country
+	- Movies
+	- Photo
+	- Info
+	
+# Directors
+	- Name
+	- Age
+	- Country
+	- Movies(ID)
+	- Photo
+	- Info
+
+# Users
+	- Name
+	- Age
+	- Country //
+	- MovieList //
+	- SubscriptionActive
+	- FavoriteMoviesList[FavoriteMovies]
+
+*********************************************************************************************************************
+
+
+# Genre Y
+	- GenreName
+	- Cover Photo
+	- GenreURL 
+
+# Genres
+	- Genrelist
+	- Cover Photo
+	- GenreURL
+
+# Genrelist
+	- MovieName
+	- Movie's Cover Photo
+	- MovieURL
+
+*********************************************************************************************************************
+
+# Movie 
+	- MovieName
+	- Year
+	- Genre
+	- Country
+	- Languages
+	- Duration
+	- ActorName
+	- DirectorName
+	- Cover Photo
+	- MovieURL
+	- Info
+	
+# Movies
+	- MovieName
+	- Year
+	- Genre
+	- Movielist [movie]
+
+*********************************************************************************************************************
+
+# FavoriteMovies (A particular movie list with all the content of the saved movies)
+	- User
+	- FavoriteMovielistName [FavoriteMoviesList]
+	- Movies [Movie]
+	
+# FavoriteMoviesList (If the user has several lists saved in his profile)
+	- User
+	- Movielists[Movielist] (tex if the user wants to creates several movielists)
+
+
+
+
+
