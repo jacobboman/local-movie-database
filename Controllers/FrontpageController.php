@@ -1,4 +1,17 @@
 <?php
-get_header();
+namespace App\Controllers;
 
-echo "Välkommen till våran härliga databas med filmer!";
+
+use App\Models\Movie;
+
+class FrontpageController extends MovieController{
+
+  public function index()
+  {
+  
+    $toplistitems = \App\Models\Movie::orderBy('release_year', 'DESC')->limit(3)->get();
+
+    include "Views/frontpage/index.view.php";
+
+  }
+}

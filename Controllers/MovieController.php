@@ -8,17 +8,18 @@ class MovieController extends Controller {
 		$movies = \App\Models\Movie::get();
 
 		$page_title = "Movies";
-		include "views/movie/index.view.php";
+		include "Views/movie/index.view.php";
 	}
 
 	public function show($movie_id) {
+		// $movie = \App\Models\Movie::get();
 		$movie = \App\Models\Movie::find($movie_id);
-		$moviecountry = $movie->country_id;
-		$country = \App\Models\Country::find($moviecountry);
+		$actors = $movie->professionals()->where('actor', 1)->get();		
+
+		$directors = $movie->professionals()->where('director', 1)->get();
 
 		$page_title = $movie->name;
-		include "views/movie/show.view.php";
+		include "Views/movie/show.view.php";
 	}
-
 }
 

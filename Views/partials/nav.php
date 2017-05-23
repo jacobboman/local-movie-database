@@ -8,6 +8,7 @@
  			<div class="navbar-nav">
  				<a class="nav-item nav-link" href="/local-movie-database/">Home</a>
  				<a class="nav-item nav-link" href="/local-movie-database/movies/">Movies</a>
+        <a class="nav-item nav-link" href="/local-movie-database/professionals/">Actors & Directors</a>
  			</div>
  	</div>
 	</div><!-- /.container -->

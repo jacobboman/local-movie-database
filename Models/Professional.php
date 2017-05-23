@@ -6,19 +6,17 @@ use Illuminate\Database\Eloquent\Model as Model;
 
 class Professional extends Model {
 
-	protected $fillable = ["name", "dayOfBirth"];
-	public $timestamp = false;
+	protected $fillable = ["name", "birth_year", "gender"];
+	// public $timestamp = false;
 
-	protected $id;
+	protected $primaryKey = "pro_id";
 	protected $name;
-	protected $dayOfBirth;
+	protected $pro_id;
+	protected $birth_year;
 	protected $gender;
-	
 
-	public function professional() {
-		return $this->belongsTo(Movie::class);
+	public function movies() {
+		return $this->belongsToMany(Movie::class, 'movie_professional', 'pro_id', 'movie_id')->withPivot('actor', 'director');
 	}
-
-
 
 }

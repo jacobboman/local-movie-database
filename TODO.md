@@ -72,8 +72,3 @@ användare
   sessions
     cookies
     (CSRF - Cross Site Request Forgery)
-
-kaffe
-  när? 
-    nu?
-      ja?

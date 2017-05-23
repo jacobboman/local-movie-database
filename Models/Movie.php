@@ -6,24 +6,20 @@ use Illuminate\Database\Eloquent\Model as Model;
 
 class Movie extends Model {
 
-	protected $fillable = ["name", "releaseDate", "coverPhoto", "trailerURL", "genre_id", "country_id", "language_id"];
-	public $timestamp = false;
+	protected $fillable = ["name", "release_year", "genre", "country", "language"];
+	// public $timestamp = false;
 
-	protected $id;
-	protected $releaseDate;
-	protected $coverPhoto;
-	protected $trailerURL;
-	protected $genre_id;
-	protected $country_id;
-	protected $language_id;
+	protected $primaryKey = "movie_id";
+	protected $name;
+	protected $movie_id;
+	protected $release_year;
+	protected $length;
+	protected $genre;
+	protected $country;
+	protected $language;
 
-	/*public function professional() {
-		return $this->belongsTo(Professional::class);
-	}*/
-	public function country() {
-		return $this->hasOne(Country::class);
+	public function professionals() {
+		return $this->belongsToMany(Professional::class, 'movie_professional', 'movie_id', 'pro_id')->withPivot('actor', 'director');
 	}
-		/*return $this->hasManyThrough('App\Genre', 'App\Countrey', 'App\Language');*/
-
 
 }

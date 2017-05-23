@@ -2,9 +2,21 @@
 
 <h1><?php echo $movie->name; ?></h1>
 
-<img src="<?php echo $movie->coverPhoto; ?>">
-<p>Released: <?php echo $movie->releaseDate; ?></p>
-<p>Recorded in: <?php echo $country->name; ?></p>
-<p><a href="/local-movie-database/movies/">Back</a></p>
+
+<h4>Director:</h4>
+<?php 
+
+foreach ($directors as $director) { ?>
+  <li><a href="/local-movie-database/professionals/?id=<?php echo $director->pro_id;?> "> <?php echo $director->name; ?></a></li>
+<?php } ?>
+
+<h4>Actors:</h4>
+<?php
+  foreach ($actors as $actor) { 
+?>
+  <li><a href="/local-movie-database/professionals/?id=<?php echo $actor->pro_id;?> "> <?php echo $actor->name; ?></a></li>
+<?php
+  }
+?>
 
 <?php get_footer(); ?>

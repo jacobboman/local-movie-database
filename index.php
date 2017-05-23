@@ -4,10 +4,11 @@ require "bootstrap.php";
 
 $app_name = "local-movie-database";
 
-$route_prefix = "/local-movie-database";
+$route_prefix = "/local-movie-database/";
 $routes = [
 	'' => 'App\Controllers\FrontpageController',
-	'/movies/' => 'App\Controllers\MovieController',
+	'movies/' => 'App\Controllers\MovieController',
+  'professionals/' => 'App\Controllers\ProfessionalController'
 	
 ];
 
@@ -18,7 +19,7 @@ $page = str_replace($route_prefix, "", $page);
 
 if (array_key_exists($page, $routes)) {
 	// ladda sida
-	$controller = $routes[$page];    // $routes["artists"]
+	$controller = $routes[$page];   
 	$ctrl = new $controller();
 	$ctrl->process();
 } else {
